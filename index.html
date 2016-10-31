@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Background Video</title>
+  <meta name="description" content="Full screen background video demo">
+  <meta name="author" description="Call Me Nick">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<div class="content">
+  <h1 class="content__heading">Wanna do an interview?</h1>
+  <a href="mailto:freyjona@usc.edu?subject=Interview Response&body=Absolutely, when's good for you?" class="content__cta">Yes</a>
+  <a href="mailto:freyjona@usc.edu?subject=Interview Response&body=No way!" class="content__cta">No</a>
+</div><!-- /content -->
+
+<video id="my-video" class="video" loop>
+  <source src="media/sbux.mp4" type="video/mp4">
+</video><!-- /video -->
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
+</body>
+</html>
